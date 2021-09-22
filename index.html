@@ -1,0 +1,70 @@
+<html>
+   <head>
+      <title>HASHTURES</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body>
+      <div id="mugi">
+         <div class="container col-lg-9 col-md-10 col-sm-11 col-xs-11 ">
+            <center>
+               <h3 class="btn btn-warning heading">
+                 Hand Gestures <br />
+                  <span>&#128078;</span> <span>&#9995;</span> <span>&#128076;</span> <span>&#128075;
+                  </span>
+                  <span>&#128077;
+                  </span>
+               </h3>
+               <br /><br />
+               <p style="font-size: 40px">
+                  Model is trained for <br />
+                  <span> <b style="background:linear-gradient(blueviolet,pink); display:inline;"> &#128077; </b>
+                  <br /></span> <span> <b style="background:linear-gradient(blueviolet,pink);">&#128078;
+                  </b> <br /></span>
+                  <span> <b style="background:linear-gradient(blueviolet,pink);display:inline;">&#128079;
+                  </b> <br /></span>
+                  <span> <b style="background:linear-gradient(blueviolet,pink);display:inline;">&#9996;
+                  </b>
+                  <br /></span>
+                  <span> <b style="background:linear-gradient(blueviolet,pink);display:inline;">&#128076;</b> <br /></span>
+               </p>
+               <div class="col-md-4 col-sm-12 col-xs-12">
+                  <label style="background: linear-gradient(grey, black); width: 350px; text-align: center">Webcam
+                  View -
+                  </label>
+                  <div id="camera"></div>
+                  <br /><br />
+                  <b>
+                     <div onclick="speak()" class="button" id="moo">Capture Image</div>
+                  </b>
+               </div>
+               <div class="col-md-4 col-sm-12 col-xs-12">
+                  <label>Prediction 1 - </label>
+                  <p class="emotion_name" id="result_emotion_name"></p>
+                  <p class="emoji" id="update_emoji"></p>
+                  <label>Prediction 2 - </label>
+                  <p class="emotion_name" id="result_emotion_name2"></p>
+                  <p class="emoji" id="update_emoji2"></p>
+               </div>
+               <div class="col-md-4 col-sm-12 col-xs-12">
+                  <label style="background: linear-gradient(grey, black); width: 350px; text-align: center">Snapshot -
+                  </label>
+                  <div id="result"></div>
+                  <br /><br />
+                  <b>
+                     <div onclick="check()" class="button" id="mool">Predict Gesture</div>
+                  </b>
+               </div>
+            </center>
+         </div>
+      </div>
+      <script src="source.js"></script>
+   </body>
+</html>
